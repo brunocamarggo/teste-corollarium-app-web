@@ -1,0 +1,35 @@
+<!-- Author: Bruno de Camargo Barreto Silva
+Computer engineering student
+Federal University of Technology - Parana (UTFPR)
+Mobile +55-18-996-171-234 
+Address Av. Antônio Silveira Brasil, n. 1235. Cornélio Procópio - PR
+Email brunocamarggo@gmail.com, bsilva@alunos.utfpr.edu.br  -->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <!-- CSS da biblioteca para fazer a costumização do autocomplete -->
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <!-- CSS próprio para uma simples costumização da UI. -->
+        <link rel="stylesheet" href="./static/css/style.css">
+        <!-- Uso da biblioteca JQuery para manipulação do DOM como tamém para realizar a funcionalidade -->
+        <!-- de autocomplete. Poderia também utilizá-la para fazer as consultas dos JSONs oriundos do back-end, -->
+        <!-- porém visando diminuir a dependência do uso desta biblioteca, os JSONs são obtidos com o uso da api -->
+        <!-- nativa fecth. -->
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <!-- Arquivo JavaScript que com a função helper para mudar a cor dos nomes da cidades -->
+        <script src="./static/js/helpers.js"></script>
+        <!-- Arquivo JavaScript que realiza a consulta no back-end -->
+        <script src="./static/js/back_end.js"></script>
+    </head>
+    <body>
+        <div class="content">
+            <h1>Bem vindo!</h1>
+            <!-- input para a entrada de dados do usuário, nele é feito a entrada do nome da cidade a ser -->
+            <!-- consultada pelo back-end. -->
+            <input id="query" type="text" placeholder="Busque por uma cidade do Brasil...">
+            <!-- neste div é adicionado as informações obtidas da consulta -->
+            <div class="info-list"></div>   
+        </div>
+    </body>
+</html>

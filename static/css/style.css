@@ -1,0 +1,58 @@
+ /* Author: Bruno de Camargo Barreto Silva */
+ /* Computer engineering student */
+ /* Federal University of Technology - Parana (UTFPR) */
+    
+ /* Mobile +55-18-996-171-234  */
+ /* Address Av. Antônio Silveira Brasil, n. 1235. Cornélio Procópio - PR */
+ /* Email brunocamarggo@gmail.com, bsilva@alunos.utfpr.edu.br  */
+h1 { color: #333D47; 
+    font-family: 'Helvetica Neue', 
+    sans-serif; 
+    font-size: 50px; 
+    font-weight: bold; 
+    letter-spacing: -1px; 
+    line-height: 1; 
+    text-align: center; }
+input[type=text], select {
+    /* size */
+    width: 50%;
+    padding: 12px 20px;
+    display: inline-block;
+    /* border-style */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.content {
+    /* position */
+    text-align: center;
+    /* border-style */
+    border-radius: 5px;
+    padding: 20px;
+}
+.info-box {
+    /* size */
+    width: 48%;
+    /* position */
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 12px;
+    /* border-style */
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    
+}
+.red-text {
+    color: red;
+}
+.blue-text {
+    color: blue;
+}
+.green-text {
+    color: green;
+}
+.btn-close {
+    background: none;
+    border: none;
+    float: right
+}
