@@ -7,16 +7,18 @@
     // Mobile +55-18-996-171-234 
     // Address Av. Antônio Silveira Brasil, n. 1235. Cornélio Procópio - PR
     // Email brunocamarggo@gmail.com, bsilva@alunos.utfpr.edu.br 
-
-    include_once '../models/City.php';
+    
+    class CitiesAPI {
     // url contendo uma lista com informações sobre os municípios do Brasil
-    $url ='https://gist.githubusercontent.com/letanure/3012978/raw/36fc21d9e2fc45c078e0e0e07cce3c81965db8f9/estados-cidades.json';
+    
     function getAllCitiesFromWeb() {
         // Retorna em formato JSON um arquivo contendo os noemes de todas as cidades do Brasil e seus
         // respectivos estados. Como fonte dos dados foi utilizado o repositório disponibilizado para o teste.
         $cities = array();
         // Realizando a captura dos dados
-        $string = file_get_contents($GLOBALS['url']);
+        $url ='https://gist.githubusercontent.com/letanure/3012978/raw/36fc21d9e2fc45c078e0e0e07cce3c81965db8f9/estados-cidades.json';
+
+        $string = file_get_contents($url);
         // Convertendo para um objeto JSON
         $cities_json = json_decode($string);
         // Extraíndo apenas as informaçoes necessárias (nome e Estado de uma cidade)        
@@ -44,11 +46,9 @@
 
     function findByName($name) {
         // Retorna um JSON contendo o nome da cidade e seu respectivo Estado.
-
         // Fazendo uso do método acima para obter a lista de todas as cidades/Estados do Brasil e
         // Convertendo para JSON para a manipulação dos dados.
-        $cities = json_decode(getAllCitiesFromWeb());
-
+        $cities = json_decode($this->getAllCitiesFromWeb());      
         // Se exister um Estado para a cidade informada pelo usário, ou seja,
         // Caso $cities->cidades->$name contenha um valor, Então o usuário entrou um nome de cidade válido.
         // De outra forma, a cidade informada não existe no Brasil, logo não existe Estado associado a mesma.
@@ -73,4 +73,5 @@
         // o retorno será "Not Found".
         return "Not Found";
     }
+}
 ?>

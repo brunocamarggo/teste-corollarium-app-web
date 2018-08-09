@@ -6,7 +6,7 @@
 // Email brunocamarggo@gmail.com, bsilva@alunos.utfpr.edu.br 
 
 // *** ATENÇÃO ***:  Altere a variável url para apontar para o seu end-point.
-let url = 'http://localhost/public_html/api.php/cities/';
+let url = 'http://localhost/teste-corollarium-app-web/api.php/cities/';
 
 function feedAutoComplete() {
     // populando o autocomple usango api do back-end
